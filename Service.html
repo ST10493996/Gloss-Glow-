@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Gloss & Glow</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fffafc;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      border-bottom: 1px solid #eee;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #d67ebf;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin-left: 20px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #d67ebf;
+    }
+
+    .services-section {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .services-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #d67ebf;
+      margin-bottom: 40px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background-color: #fff0f8;
+      border-radius: 15px;
+      padding: 30px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-card h3 {
+      font-family: 'Playfair Display', serif;
+      color: #d67ebf;
+      margin-bottom: 15px;
+    }
+
+    .service-card p {
+      color: #555;
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      color: #b45ca0;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid #eee;
+      color: #aaa;
+      font-size: 0.9rem;
+      margin-top: 80px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gloss & Glow</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="services-section">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>Classic Manicure</h3>
+        <p>A traditional nail care experience with shaping, cuticle care, and polish for naturally elegant nails.</p>
+        <p class="price">R180</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Gel Nails</h3>
+        <p>Enjoy long-lasting shine and vibrant color with our premium gel nail treatments.</p>
+        <p class="price">R250</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Nail Art</h3>
+        <p>From subtle elegance to bold designs — express your unique style with custom nail art.</p>
+        <p class="price">From R50 per nail</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Pedicure</h3>
+        <p>Relax and refresh with a soothing pedicure designed to rejuvenate your feet and spirit.</p>
+        <p class="price">R220</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Acrylic Extensions</h3>
+        <p>Beautifully sculpted acrylic nails that add length, strength, and elegance to your hands.</p>
+        <p class="price">R300</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Luxury Spa Package</h3>
+        <p>Indulge in the full Gloss & Glow experience with a manicure, pedicure, and custom design.</p>
+        <p class="price">R550</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Gloss & Glow. All rights reserved.
+  </footer>
+</body>
+</html>

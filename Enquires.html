@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enquiries | Gloss & Glow</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fffafc;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      border-bottom: 1px solid #eee;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #d67ebf;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin-left: 20px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #d67ebf;
+    }
+
+    section {
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      color: #d67ebf;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    input, select, textarea {
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #d67ebf;
+    }
+
+    button {
+      background-color: #d67ebf;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #c368ad;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid #eee;
+      color: #aaa;
+      font-size: 0.9rem;
+      margin-top: 80px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gloss & Glow</h1>
+    <nav>
+      <a href="Homepage.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="Service.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Make an Enquiry</h2>
+    <form id="enquiryForm" novalidate>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+      <small class="error" id="nameError"></small>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+      <small class="error" id="emailError"></small>
+
+      <label for="service">Service Interested In:</label>
+      <select id="service" name="service" required>
+        <option value="">Select a service</option>
+        <option value="Manicure">Manicure</option>
+        <option value="Pedicure">Pedicure</option>
+        <option value="Gel Nails">Gel Nails</option>
+        <option value="Acrylic Nails">Acrylic Nails</option>
+        <option value="Nail Art">Nail Art</option>
+      </select>
+      <small class="error" id="serviceError"></small>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <small class="error" id="messageError"></small>
+
+      <button type="submit">Submit Enquiry</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Gloss & Glow. All rights reserved.
+  </footer>
+
+  <script>
+    const form = document.getElementById('enquiryForm');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      let valid = true;
+
+      // Clear old errors
+      document.querySelectorAll('.error').forEach(error => error.textContent = '');
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value.trim();
+
+      if (name.length < 2) {
+        document.getElementById('nameError').textContent = 'Please enter your full name.';
+        valid = false;
+      }
+
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!email.match(emailPattern)) {
+        document.getElementById('emailError').textContent = 'Enter a valid email address.';
+        valid = false;
+      }
+
+      if (service === '') {
+        document.getElementById('serviceError').textContent = 'Please select a service.';
+        valid = false;
+      }
+
+      if (message.length < 10) {
+        document.getElementById('messageError').textContent = 'Message should be at least 10 characters long.';
+        valid = false;
+      }
+
+      if (valid) {
+        alert('Thank you for your enquiry! We will get back to you soon 💅');
+        form.reset();
+      }
+    });
+  </script>
+</body>
+</html>

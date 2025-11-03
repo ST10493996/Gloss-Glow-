@@ -120,3 +120,8 @@ REFERENCE:
 •	Upwork. (2025). Average Freelance Web Developer Rates in South Africa. Retrieved from https://www.upwork.com
 •	Webafrica. (2025). Website Maintenance Costs in South Africa. Retrieved from https://www.webafrica.co.za
 
+Reference:
+Pictures from Pinterest 
+Lindsay Kolowich Cox 202, Web Design 101: How HTML, CSS & JavaScript Work, available at: https://bog.hubspot.com/marketing/wen-design-html-css-javascrpt[Accesed 05 November 2024].
+
+
